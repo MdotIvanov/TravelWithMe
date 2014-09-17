@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TravelWithMe.Models
+﻿namespace TravelWithMe.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class User
     {
         private ICollection<Travel> travels;
@@ -31,14 +28,13 @@ namespace TravelWithMe.Models
 
         public string Phone { get; set; }
 
-        public virtual 
-
-        public ICollection<Travel> Travels
+        public virtual ICollection<Travel> Travels
         {
             get
             {
                 return this.travels;
             }
+
             set
             {
                 this.travels = value;
