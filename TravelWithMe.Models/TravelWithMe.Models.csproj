@@ -5,6 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{12B2D4F0-2DA0-41EF-AFD1-D389C80DD15E}</ProjectGuid>
+    <ProjectGuid>{24CB24AF-A393-40CD-8F8D-A1F1FD844C84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TravelWithMe.Models</RootNamespace>
@@ -56,6 +57,10 @@
     <Compile Include="City.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Travel.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Travel.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
