@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30825.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWithMe.Service", "TravelWithMe.Service\TravelWithMe.Service.csproj", "{9E509C58-26F3-4A87-8440-CA723F91597A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWithMe.Models", "TravelWithMe.Models\TravelWithMe.Models.csproj", "{24CB24AF-A393-40CD-8F8D-A1F1FD844C84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9E509C58-26F3-4A87-8440-CA723F91597A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E509C58-26F3-4A87-8440-CA723F91597A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E509C58-26F3-4A87-8440-CA723F91597A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24CB24AF-A393-40CD-8F8D-A1F1FD844C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24CB24AF-A393-40CD-8F8D-A1F1FD844C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24CB24AF-A393-40CD-8F8D-A1F1FD844C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24CB24AF-A393-40CD-8F8D-A1F1FD844C84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,3 +5,5 @@
 /packages
 /TravelWithMe.Service/bin
 /TravelWithMe.Service/obj/Debug
+/TravelWithMe.Models/obj/Debug
+/TravelWithMe.v12.suo
