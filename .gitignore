@@ -1,9 +1,0 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/packages
-/TravelWithMe.Service/bin
-/TravelWithMe.Service/obj/Debug
-/TravelWithMe.Models/obj/Debug
-/TravelWithMe.v12.suo
