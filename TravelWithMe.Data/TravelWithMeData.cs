@@ -11,6 +11,11 @@
         private DbContext context;
         private IDictionary<Type, object> repositories;
 
+        public TravelWithMeData()
+            : this(new TravelWithMeDbContext())
+        {
+        }
+
         public TravelWithMeData(DbContext context)
         {
             this.context = context;
