@@ -35,8 +35,15 @@ namespace TravelWithMe.Web.Models
     public class RegisterBindingModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Required]
         public string Email { get; set; }
+
+
+        [Required]
+        public string PhoneNumber { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -52,7 +59,7 @@ namespace TravelWithMe.Web.Models
 
     public class RegisterExternalBindingModel
     {
-        [Required]
+     //   [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }

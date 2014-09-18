@@ -18,7 +18,7 @@ namespace TravelWithMe.Web.Models
     {
         public string LocalLoginProvider { get; set; }
 
-        public string Email { get; set; }
+        public string Name { get; set; }
 
         public IEnumerable<UserLoginInfoViewModel> Logins { get; set; }
 
@@ -27,7 +27,7 @@ namespace TravelWithMe.Web.Models
 
     public class UserInfoViewModel
     {
-        public string Email { get; set; }
+        public string Name { get; set; }
 
         public bool HasRegistered { get; set; }
 

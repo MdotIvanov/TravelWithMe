@@ -13,6 +13,7 @@ using TravelWithMe.Models;
 
 namespace TravelWithMe.Web.Controllers
 {
+    [Authorize]
     public class CitiesController : ApiController
     {
         private TravelWithMeDbContext db = new TravelWithMeDbContext();
