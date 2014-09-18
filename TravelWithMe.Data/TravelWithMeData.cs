@@ -17,7 +17,7 @@
             this.repositories = new Dictionary<Type, object>();
         }
 
-        public IRepository<TravelWithMeUser> Users
+        public IGenericRepository<TravelWithMeUser> Users
         {
             get
             {
@@ -25,7 +25,7 @@
             }
         }
 
-        public IRepository<Travel> Travels
+        public IGenericRepository<Travel> Travels
         {
             get
             {
@@ -33,7 +33,7 @@
             }
         }
 
-        public IRepository<City> Cities
+        public IGenericRepository<City> Cities
         {
             get
             {
@@ -46,7 +46,7 @@
             return this.context.SaveChanges();
         }
 
-        private IRepository<T> GetRepository<T>() where T : class
+        private IGenericRepository<T> GetRepository<T>() where T : class
         {
             var typeOfRepository = typeof(T);
             if (this.repositories.ContainsKey(typeOfRepository))
@@ -55,7 +55,18 @@
                 this.repositories.Add(typeOfRepository, newRepository);
             }
 
-            return (IRepository<T>)this.repositories[typeOfRepository];
+            return (IGenericRepository<T>)this.repositories[typeOfRepository];
+        }
+
+
+        public IDbSet<T> Set<T>() where T : class
+        {
+            throw new NotImplementedException();
+        }
+
+        public System.Data.Entity.Infrastructure.DbEntityEntry<T> Entry<T>(T entity) where T : class
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -7,19 +7,21 @@
     using System.Threading.Tasks;
     using TravelWithMe.Data.Repositories;
     using TravelWithMe.Models;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
 
     public interface ITravelWithMeData
     {
-        IRepository<TravelWithMeUser> Users { get; }
+        IGenericRepository<TravelWithMeUser> Users { get; }
 
-        IRepository<Travel> Travels { get; }
+        IGenericRepository<Travel> Travels { get; }
 
-        IRepository<City> Cities { get; }
+        IGenericRepository<City> Cities { get; }
+
+        IDbSet<T> Set<T>() where T : class;
+
+        DbEntityEntry<T> Entry<T>(T entity) where T : class;
 
         int SaveChanges();
-
-
-
-
     }
 }

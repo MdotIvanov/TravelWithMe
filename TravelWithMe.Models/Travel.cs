@@ -2,6 +2,7 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Travel
     {
@@ -11,7 +12,15 @@
 
         public virtual TravelWithMeUser User { get; set; }
 
-        public DateTime TravelDate { get; set; }
+        [MinLength(10)]
+        [MaxLength(6000)]
+        public string Description { get; set; }
+
+        public DateTime? StartDate { get; set; }
+
+        public DateTime? EndDate { get; set; }
+
+        public decimal TicketCost { get; set; }
 
         public int StartLocationId { get; set; }
 
@@ -24,5 +33,14 @@
         [MinLength(3)]
         [MaxLength(20)]
         public string PhoneNumber { get; set; }
+
+        [NotMapped]
+        public TimeSpan? TravelLenght
+        {
+            get
+            {
+                return this.EndDate - this.StartDate;
+            }
+        }
     }
 }
