@@ -9,24 +9,19 @@
     using System.Web;
     using System.Web.Http;
     using System.Web.Http.ModelBinding;
-    using System.Web.Http.Owin;
-    using System.Web.Http.Cors;
-
+    using TravelWithMe.Web.Models;
+    using TravelWithMe.Web.Providers;
+    using TravelWithMe.Web.Results;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
     using Microsoft.Owin.Security.Cookies;
     using Microsoft.Owin.Security.OAuth;
-
-    using TravelWithMe.Web.Models;
-    using TravelWithMe.Web.Providers;
-    using TravelWithMe.Web.Results;
     using TravelWithMe.Models;
 
     [Authorize]
     [RoutePrefix("api/Account")]
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";
