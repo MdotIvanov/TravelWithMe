@@ -34,8 +34,7 @@
         [MaxLength(20)]
         public string PhoneNumber { get; set; }
 
-        [NotMapped]
-        public TimeSpan? TravelLenght
+        public TimeSpan? SpendingTime
         {
             get
             {
