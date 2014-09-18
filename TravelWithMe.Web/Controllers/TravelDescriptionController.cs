@@ -44,8 +44,6 @@
 
             this.db.Travels.Add(new Travel()
             {
-                StartLocationId = newTravel.StartLocationId,
-                EndLocatonId = newTravel.EndLocatonId,
                 StartLocation = newTravel.StartLocation,
                 EndLocation = newTravel.EndLocation,
                 Description = newTravel.Description,

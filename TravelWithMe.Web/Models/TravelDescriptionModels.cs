@@ -14,8 +14,6 @@
                 return a => new TravelDescriptionModels
                 {
                     SpendingTime = a.SpendingTime,
-                    StartLocationId = a.StartLocationId,
-                    EndLocatonId = a.EndLocatonId,
                     StartLocation = a.StartLocation,
                     EndLocation = a.EndLocation,
                     Description = a.Description,

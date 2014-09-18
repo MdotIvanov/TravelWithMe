@@ -21,11 +21,7 @@
 
         public decimal TicketCost { get; set; }
 
-        public int StartLocationId { get; set; }
-
         public virtual City StartLocation { get; set; }
-
-        public int EndLocatonId { get; set; }
 
         public virtual City EndLocation { get; set; }
 
