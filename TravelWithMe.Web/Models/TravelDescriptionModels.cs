@@ -15,6 +15,7 @@
                 {
                     SpendingTime = a.SpendingTime,
                     StartLocationId = a.StartLocationId,
+                    EndLocatonId = a.EndLocatonId,
                     StartLocation = a.StartLocation,
                     EndLocation = a.EndLocation,
                     Description = a.Description,
@@ -32,5 +33,7 @@
         public City StartLocation { get; set; }
 
         public City EndLocation { get; set; }
+
+        public int EndLocatonId { get; set; }
     }
 }
