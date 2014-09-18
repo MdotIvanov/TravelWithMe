@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Web.Http;
-using Microsoft.Owin.Security.OAuth;
-using Newtonsoft.Json.Serialization;
-
-namespace TravelWithMe.Web
+﻿namespace TravelWithMe.Web
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net.Http;
+    using System.Web.Http;
+    using Microsoft.Owin.Security.OAuth;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Serialization;
+
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
@@ -25,6 +26,9 @@ namespace TravelWithMe.Web
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.None;
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }
