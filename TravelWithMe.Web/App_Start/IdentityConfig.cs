@@ -40,6 +40,7 @@ namespace TravelWithMe.Web
             {
                 manager.UserTokenProvider = new DataProtectorTokenProvider<TravelWithMeUser>(dataProtectionProvider.Create("ASP.NET Identity"));
             }
+
             return manager;
         }
     }
