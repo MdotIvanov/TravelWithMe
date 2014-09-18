@@ -23,9 +23,10 @@
         }
 
         // GET travel info/1
-        public HttpResponseMessage GetTravelById(int startLocationId)
+        public HttpResponseMessage GetTravelById(int id)
         {
-            var travelToGet = this.db.Travels.All().Where(travels => travels.StartLocationId == startLocationId).Select(TravelDescriptionModels.FromTravel).FirstOrDefault();
+            var travelToGet = this.db.Travels.All().Where(travels => travels.Id == id).Select(TravelDescriptionModels.FromTravel).FirstOrDefault();
+
             if (travelToGet == null)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "Travel does not exist.");
@@ -44,6 +45,7 @@
             this.db.Travels.Add(new Travel()
             {
                 StartLocationId = newTravel.StartLocationId,
+                EndLocatonId = newTravel.EndLocatonId,
                 StartLocation = newTravel.StartLocation,
                 EndLocation = newTravel.EndLocation,
                 Description = newTravel.Description,
@@ -55,9 +57,10 @@
 
         //PUT travel info/1
         [HttpPut]
-        public HttpResponseMessage UpdateFileDescription(int startLocationId, [FromBody]string newFileDescription)
+        public HttpResponseMessage UpdateFileDescription(int id, [FromBody]string newFileDescription)
         {
-            var travelToUpdate = this.db.Travels.All().FirstOrDefault(travel => travel.StartLocationId == startLocationId);
+            var travelToUpdate = this.db.Travels.All().FirstOrDefault(travel => travel.Id == id);
+
             if (travelToUpdate == null)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "Travel does not exist.");
@@ -71,9 +74,9 @@
 
         // DELETE travel info/1
         [HttpDelete]
-        public HttpResponseMessage Delete(int startLocationId)
+        public HttpResponseMessage Delete(int id)
         {
-            var travelToDelete = this.db.Travels.All().FirstOrDefault(travel => travel.StartLocationId == startLocationId);
+            var travelToDelete = this.db.Travels.All().FirstOrDefault(travel => travel.Id == id);
             if (travelToDelete == null)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "Travel does not exist.");
